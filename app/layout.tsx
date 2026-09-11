@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { FirebaseAnalytics } from "@/components/analytics/firebase-analytics";
 import { business } from "@/config/business";
 import "./globals.css";
 
@@ -52,6 +53,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <FirebaseAnalytics />
       </body>
     </html>
   );
