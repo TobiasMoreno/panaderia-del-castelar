@@ -13,7 +13,7 @@ export function Hero() {
         <h1 id="hero-title">
           Recién
           <br />
-          horneadoashe.
+          horneado.
           <br />
           <em>Todos los días.</em>
         </h1>
