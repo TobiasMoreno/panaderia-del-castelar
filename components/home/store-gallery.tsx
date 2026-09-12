@@ -26,8 +26,8 @@ export function StoreGallery() {
         <figure className="gallery-wide">
           <div className="gallery-image">
             <Image
-              src="/store/interior-01.jpeg"
-              alt="Vitrinas de Del Castelar con facturas, pastelería y tortas"
+              src="/mostrador-izquierdo.jpeg"
+              alt="Vitrina de Del Castelar con masas, alfajores y productos dulces"
               fill
               sizes="(max-width: 767px) 88vw, 520px"
             />
@@ -37,13 +37,13 @@ export function StoreGallery() {
         <figure className="gallery-tall">
           <div className="gallery-image">
             <Image
-              src="/store/mostrador.jpeg"
-              alt="Mostrador y entrada de la panadería Del Castelar"
+              src="/cartel-luminoso.jpeg"
+              alt="Cartel exterior de la panadería Del Castelar sobre el cielo azul"
               fill
               sizes="(max-width: 767px) 48vw, 304px"
             />
           </div>
-          <figcaption>Tu parada en {business.address.street}.</figcaption>
+          <figcaption>Encontranos en {business.address.street}.</figcaption>
         </figure>
         <div className="gallery-note">
           <span className="small-rule" />

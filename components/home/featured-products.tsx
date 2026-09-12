@@ -71,7 +71,7 @@ export function FeaturedProducts() {
       </div>
       <div className="featured-bottom">
         <p className="image-note">
-          Fotografías de producto ilustrativas.
+          Fotografías reales de nuestro mostrador.
           <br />
           Consultanos por las variedades del día.
         </p>
