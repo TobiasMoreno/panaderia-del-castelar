@@ -17,14 +17,14 @@ export function FeaturedProducts() {
         <div>
           <p className="eyebrow section-label">01 / El mostrador</p>
           <h2 id="featured-title">
-            Lo que sale
+            Algo distinto
             <br />
-            <em>del horno.</em>
+            <em>para cada antojo.</em>
           </h2>
         </div>
         <p>
-          Para el desayuno, la mesa
-          <br />o ese antojo de la tarde.
+          De la primera factura
+          <br />a la torta para compartir.
         </p>
       </div>
       <div className="featured-grid">
@@ -62,11 +62,11 @@ export function FeaturedProducts() {
         <div className="featured-editorial">
           <span className="small-rule" />
           <p>
-            Siempre hay
+            Una vuelta,
             <br />
-            algo <em>rico.</em>
+            muchos <em>antojos.</em>
           </p>
-          <span>Elegí tu próxima pausa.</span>
+          <span>Elegí el tuyo.</span>
         </div>
       </div>
       <div className="featured-bottom">

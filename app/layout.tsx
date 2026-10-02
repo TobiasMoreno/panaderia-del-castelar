@@ -26,10 +26,7 @@ export const metadata: Metadata = {
     default: "Del Castelar | Panadería en Córdoba",
     template: "%s | Del Castelar",
   },
-  robots: {
-    index: Boolean(business.siteUrl),
-    follow: Boolean(business.siteUrl),
-  },
+  robots: business.siteUrl ? undefined : { index: false, follow: true },
   icons: {
     icon: [{ url: "/brand/logo.jpeg", type: "image/jpeg", sizes: "406x406" }],
     apple: "/brand/logo.jpeg",

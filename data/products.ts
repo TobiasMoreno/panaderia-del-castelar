@@ -21,8 +21,7 @@ export type Product = {
 };
 
 // Initial category-level selection, not an invented list of specific recipes.
-// Replace image + imageAlt and set provisionalImage=false when official photos arrive.
-// Stock provenance and licenses are documented in public/products/SOURCES.md.
+// Official product photos supplied by Del Castelar use provisionalImage=false.
 export const products: Product[] = [
   {
     id: "facturas",
@@ -30,10 +29,11 @@ export const products: Product[] = [
     name: "Facturas",
     category: "facturas",
     shortDescription: "Las compañeras de cada mate.",
-    image: "/products/facturas.jpg",
-    imageAlt: "Selección de piezas de bollería doradas, fotografía ilustrativa",
-    featured: false,
-    provisionalImage: true,
+    image: "/products/facturas-del-castelar.jpeg",
+    imageAlt:
+      "Facturas de hojaldre con crema, coco, chocolate y frutos secos de Del Castelar",
+    featured: true,
+    provisionalImage: false,
   },
   {
     id: "chipa",
@@ -43,7 +43,7 @@ export const products: Product[] = [
     shortDescription: "Doraditos, tiernos y listos para picar.",
     image: "/chipa.jpeg",
     imageAlt: "Chipa de Del Castelar exhibido en una canasta del mostrador",
-    featured: true,
+    featured: false,
     provisionalImage: false,
   },
   {
@@ -54,7 +54,7 @@ export const products: Product[] = [
     shortDescription: "Un clásico para el mate, recién horneado.",
     image: "/criollos-comunes.jpeg",
     imageAlt: "Criollos comunes de Del Castelar exhibidos en una canasta",
-    featured: true,
+    featured: false,
     provisionalImage: false,
   },
   {
@@ -65,7 +65,7 @@ export const products: Product[] = [
     shortDescription: "Capas crocantes para acompañar cualquier pausa.",
     image: "/criollos-hojaldres.jpeg",
     imageAlt: "Criollos de hojaldre de Del Castelar exhibidos en una canasta",
-    featured: true,
+    featured: false,
     provisionalImage: false,
   },
   {
@@ -76,7 +76,7 @@ export const products: Product[] = [
     shortDescription: "Variedades para cada mesa y cada día.",
     image: "/panes.jpeg",
     imageAlt: "Variedad de panes de Del Castelar exhibidos en el local",
-    featured: true,
+    featured: false,
     provisionalImage: false,
   },
   {
@@ -85,10 +85,11 @@ export const products: Product[] = [
     name: "Pastelería",
     category: "pasteleria",
     shortDescription: "Para hacerle un lugar a algo dulce.",
-    image: "/products/pasteleria.jpg",
-    imageAlt: "Porción de pastelería en un plato, fotografía ilustrativa",
-    featured: false,
-    provisionalImage: true,
+    image: "/products/pasteleria-rogel.jpeg",
+    imageAlt:
+      "Rogel de Del Castelar con capas de dulce de leche y copos de merengue",
+    featured: true,
+    provisionalImage: false,
   },
   {
     id: "tortas",
@@ -96,10 +97,11 @@ export const products: Product[] = [
     name: "Tortas",
     category: "tortas",
     shortDescription: "Una buena excusa para compartir.",
-    image: "/products/tortas.jpg",
-    imageAlt: "Torta decorada con frutillas, fotografía ilustrativa",
-    featured: false,
-    provisionalImage: true,
+    image: "/products/torta-decorada.jpeg",
+    imageAlt:
+      "Torta de Del Castelar decorada con crema blanca y rosa, cerezas y chocolate",
+    featured: true,
+    provisionalImage: false,
   },
   {
     id: "dulces",
@@ -107,10 +109,11 @@ export const products: Product[] = [
     name: "Masas y cosas dulces",
     category: "dulces",
     shortDescription: "Pequeños gustos para la tarde.",
-    image: "/products/dulces.jpg",
-    imageAlt: "Alfajores apilados, fotografía ilustrativa",
-    featured: false,
-    provisionalImage: true,
+    image: "/products/dulce-baniado-en-chocolate.jpeg",
+    imageAlt:
+      "Pieza dulce de Del Castelar bañada en chocolate blanco y negro",
+    featured: true,
+    provisionalImage: false,
   },
   {
     id: "cafe",

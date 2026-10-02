@@ -4,7 +4,7 @@ import { business } from "@/config/business";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata(
-  "Productos",
+  "Productos de panadería en Córdoba",
   "Conocé las opciones de Del Castelar: facturas, panificados, pastelería, tortas, dulces, salados y café. Te esperamos en Potosí 908, Córdoba.",
   "/productos",
 );

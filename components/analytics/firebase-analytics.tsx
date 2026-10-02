@@ -1,14 +1,22 @@
 "use client";
 
 import { useEffect } from "react";
-import { getAnalytics, isSupported } from "firebase/analytics";
-import { firebaseApp } from "@/lib/firebase";
 
 export function FirebaseAnalytics() {
   useEffect(() => {
-    void isSupported().then((supported) => {
-      if (supported) getAnalytics(firebaseApp);
+    let active = true;
+    async function initializeAnalytics() {
+      const { getAnalytics, isSupported } = await import("firebase/analytics");
+      if (!(await isSupported()) || !active) return;
+      const { firebaseApp } = await import("@/lib/firebase");
+      if (active) getAnalytics(firebaseApp);
+    }
+    void initializeAnalytics().catch(() => {
+      // Analytics must not interrupt the site if an extension or network blocks it.
     });
+    return () => {
+      active = false;
+    };
   }, []);
 
   return null;

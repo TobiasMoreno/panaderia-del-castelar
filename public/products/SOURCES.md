@@ -3,8 +3,8 @@
 Descargadas de Pexels el 11 de septiembre de 2026. Uso bajo la licencia de Pexels:
 https://www.pexels.com/license/ (permite uso comercial y no exige atribución).
 No se utilizan imágenes remotas en la web. Las imágenes originales del negocio están
-en `public/store/` y en la raíz de `public/`; el logo suministrado está intacto en
-`public/brand/logo.jpeg`.
+en `public/store/`, `public/products/` y en la raíz de `public/`; el logo suministrado
+está intacto en `public/brand/logo.jpeg`.
 
 | Archivo | Fuente |
 | --- | --- |
@@ -15,8 +15,6 @@ en `public/store/` y en la raíz de `public/`; el logo suministrado está intact
 | dulces.jpg | https://www.pexels.com/photo/tower-of-argentinian-cookies-17358380/ |
 | salados.jpg | https://www.pexels.com/photo/close-up-of-sandwich-15348783/ |
 
-Las imágenes de esta carpeta ilustran categorías; no certifican recetas, ingredientes
-ni variedades. La interfaz identifica expresamente esas fotos como ilustrativas. Las
-fotos propias del negocio se muestran con la etiqueta «En Del Castelar».
-Para sustituir: reemplazar el archivo, actualizar `imageAlt` en `data/products.ts`
-y cambiar `provisionalImage` a `false`. Si se cambia el formato, actualizar `image`.
+Estas referencias se conservan como material de respaldo, pero actualmente no se
+muestran en el catálogo. Las fotos propias del negocio se identifican en la interfaz
+con la etiqueta «En Del Castelar».

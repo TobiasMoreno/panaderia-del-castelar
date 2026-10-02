@@ -104,9 +104,8 @@ export function Catalog() {
         </div>
       </LazyMotion>
       <p className="catalog-disclaimer">
-        Las fotos marcadas como “Imagen ilustrativa” son de referencia. Las
-        variedades disponibles pueden cambiar: consultanos o acercate al
-        mostrador.
+        Fotografías reales de nuestros productos. Las variedades disponibles
+        pueden cambiar: consultanos o acercate al mostrador.
       </p>
     </div>
   );

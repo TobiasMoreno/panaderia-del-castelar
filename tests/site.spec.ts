@@ -61,7 +61,7 @@ for (const route of ["/", "/productos"]) {
 test("category links, all filters, history and reload", async ({ page }) => {
   await page.goto("/");
   await page.locator(".featured-item--1 a").click();
-  await expect(page).toHaveURL(/categoria=salados/);
+  await expect(page).toHaveURL(/categoria=facturas/);
   await expect(page.locator(".catalog-product")).toHaveCount(1);
   for (const [name, count] of [
     ["Panificados", 3],

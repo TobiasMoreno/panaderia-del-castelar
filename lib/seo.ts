@@ -7,31 +7,32 @@ export function pageMetadata(
   path: string,
 ): Metadata {
   const url = business.siteUrl ? `${business.siteUrl}${path}` : undefined;
+  const fullTitle = path === "/" ? title : `${title} | ${business.name}`;
+  const socialImage = {
+    url: "/store/fachada.jpeg",
+    width: 1024,
+    height: 768,
+    alt: "Fachada de Del Castelar Panadería en Córdoba",
+  };
   return {
-    title: path === "/" ? { absolute: title } : title,
+    title: { absolute: fullTitle },
     description,
+    robots: { index: Boolean(business.siteUrl), follow: true },
     alternates: url ? { canonical: url } : undefined,
     openGraph: {
-      title,
+      title: fullTitle,
       description,
       url,
       siteName: business.fullName,
       locale: "es_AR",
       type: "website",
-      images: [
-        {
-          url: "/store/fachada.jpeg",
-          width: 1024,
-          height: 768,
-          alt: "Fachada de Del Castelar Panadería en Córdoba",
-        },
-      ],
+      images: [socialImage],
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: fullTitle,
       description,
-      images: ["/store/fachada.jpeg"],
+      images: [socialImage],
     },
   };
 }
@@ -41,7 +42,11 @@ export const bakerySchema = {
   "@type": "Bakery",
   name: business.fullName,
   ...(business.siteUrl
-    ? { url: business.siteUrl, image: `${business.siteUrl}/store/fachada.jpeg` }
+    ? {
+        "@id": `${business.siteUrl}/#panaderia`,
+        url: business.siteUrl,
+        image: `${business.siteUrl}/store/fachada.jpeg`,
+      }
     : {}),
   telephone: business.phoneInternational,
   address: {
