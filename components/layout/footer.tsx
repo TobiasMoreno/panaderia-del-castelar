@@ -13,10 +13,10 @@ export function Footer() {
           aria-label="Del Castelar — Inicio"
         >
           <Image
-            src="/brand/logo.jpeg"
-            alt="Logo original de Del Castelar Panadería"
-            width={406}
-            height={406}
+            src="/brand/logo-azul-mini.jpeg"
+            alt="Del Castelar Panadería"
+            width={1254}
+            height={1254}
             sizes="140px"
           />
         </Link>

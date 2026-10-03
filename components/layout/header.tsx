@@ -65,10 +65,10 @@ export function Header() {
           aria-label="Del Castelar Panadería — Inicio"
         >
           <Image
-            src="/brand/logo.jpeg"
+            src="/brand/logo-mini-blanco.jpeg"
             alt="Del Castelar Panadería"
-            width={406}
-            height={406}
+            width={1254}
+            height={1254}
             sizes="96px"
             loading="eager"
           />

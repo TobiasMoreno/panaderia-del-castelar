@@ -62,12 +62,12 @@ test("category links, all filters, history and reload", async ({ page }) => {
   await page.goto("/");
   await page.locator(".featured-item--1 a").click();
   await expect(page).toHaveURL(/categoria=facturas/);
-  await expect(page.locator(".catalog-product")).toHaveCount(1);
+  await expect(page.locator(".catalog-product")).toHaveCount(2);
   for (const [name, count] of [
     ["Panificados", 3],
-    ["Pastelería", 1],
+    ["Pastelería", 2],
     ["Tortas", 1],
-    ["Dulces", 1],
+    ["Dulces", 2],
     ["Salados", 1],
     ["Café", 1],
   ] as const) {
@@ -82,12 +82,12 @@ test("category links, all filters, history and reload", async ({ page }) => {
     page.getByRole("button", { name: "Café", exact: true }),
   ).toHaveAttribute("aria-pressed", "true");
   await page.getByRole("button", { name: /Todos/ }).click();
-  await expect(page.locator(".catalog-product")).toHaveCount(9);
+  await expect(page.locator(".catalog-product")).toHaveCount(12);
   await page.goBack();
   await expect(page.locator(".catalog-product")).toHaveCount(1);
   await expect(page.locator(".catalog-product h2")).toHaveText("Café");
   await page.goto("/productos?categoria=inexistente");
-  await expect(page.locator(".catalog-product")).toHaveCount(9);
+  await expect(page.locator(".catalog-product")).toHaveCount(12);
 });
 
 test("mobile menu traps focus, Escape restores focus, navigation works", async ({

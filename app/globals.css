@@ -10,6 +10,7 @@
 
 :root {
   --navy: #0b1933;
+  --brand-blue: #031749;
   --navy-soft: #142640;
   --gold: #b18c49;
   --cream: #f8f6f1;
@@ -862,7 +863,7 @@ figcaption {
 }
 
 .site-footer {
-  background: var(--navy);
+  background: var(--brand-blue);
   color: white;
 }
 .footer-main {
@@ -1029,6 +1030,35 @@ figcaption {
 }
 .catalog-product:nth-child(even) .catalog-photo {
   aspect-ratio: 4 / 5;
+}
+.catalog-product--tortas .catalog-photo {
+  aspect-ratio: 3 / 4;
+}
+:is(
+  .catalog-product--merengues,
+  .catalog-product--facturas,
+  .catalog-product--alfajores-galletas
+)
+  .catalog-photo {
+  aspect-ratio: 1312 / 1199;
+}
+:is(
+  .catalog-product--merengues,
+  .catalog-product--facturas,
+  .catalog-product--alfajores-galletas
+)
+  .catalog-photo
+  img {
+  object-fit: contain;
+}
+:is(
+  .catalog-product--merengues,
+  .catalog-product--facturas,
+  .catalog-product--alfajores-galletas
+):hover
+  .catalog-photo
+  img {
+  transform: none;
 }
 .catalog-photo img {
   object-fit: cover;
@@ -1660,6 +1690,14 @@ figcaption {
     margin-top: 0;
     width: 85%;
     justify-self: end;
+  }
+  :is(
+    .catalog-product.catalog-product--merengues,
+    .catalog-product.catalog-product--facturas,
+    .catalog-product.catalog-product--alfajores-galletas
+  ) {
+    width: 100%;
+    justify-self: stretch;
   }
   .catalog-product:nth-child(even) .catalog-photo {
     aspect-ratio: 1;
